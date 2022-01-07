@@ -1,0 +1,88 @@
+starship init fish | source
+
+set -gx VISUAL vim
+
+# settings for fisher plugins
+# projects for pj project Jump
+set -gx PROJECT_PATHS \
+    ~/projects/datadog \
+    ~/projects/technovangelist
+
+# set minimum time for a notifier when command is done. uses franciscolourenco/done
+set -U __done_min_cmd_duration 5000 # default: 5000 ms
+
+
+# set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+# set -l sshrunning (pgrep ssh-agent)
+# if test -z "$sshrunning"
+#   eval (ssh-agent -c)
+#   set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+#   set -Ux SSH_AGENT_PID $SSH_AGENT_PID
+#   set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
+# end
+# set -x HOMEBREW_NO_INSECURE_REDIRECT 1
+# set -x HOMEBREW_CASK_OPTS "--require-sha"
+# set -x AWS_VAULT_KEYCHAIN_NAME login
+# set -x AWS_SESSION_TTL 24h
+# set -x AWS_ASSUME_ROLE_TTL 1h
+# set -x ddlearning_api_key {{ (onepasswordItemFields "ddlearningdatadogkeys").apikey.v }}
+# set -x ddlearning_app_key {{ (onepasswordItemFields "ddlearningdatadogkeys").appkey.v }}
+# alias d="/usr/local/bin/do"
+# alias dr="/usr/local/bin/do -r"
+# alias ddev="/Users/matt.williams/projects/technovangelist/do/lib/index.js"
+# alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+# # tabtab source for serverless package
+# # uninstall by removing these lines or running `tabtab uninstall serverless`
+# [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
+# # tabtab source for sls package
+# # uninstall by removing these lines or running `tabtab uninstall sls`
+# [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
+# # tabtab source for slss package
+# # uninstall by removing these lines or running `tabtab uninstall slss`
+# [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.fish
+
+# set -g FZF_CTRL_T_COMMAND "command find -L \$dir -type f 2> /dev/null | sed '1d; s#^\./##'"
+
+# set -gx DENO_INSTALL "/Users/matt.williams/.deno"
+# abbr pip 'pip3'
+# abbr py 'python3'
+
+# set -x DDLABSAUTHDOMAIN {{ (onepasswordItemFields "ddlabssecrets").ddlabsauthdomain.v }}
+# set -x DDLABSCLIENTID {{ (onepasswordItemFields "ddlabssecrets").ddlabsclientid.v }}
+# set -x DDLABSCLIENTSECRET {{ (onepasswordItemFields "ddlabssecrets").ddlabsclientsecret.v }}
+# set -x ddlearning_airtable_api {{ (onepasswordItemFields "airtableapikeys").ddlearning.v }}
+# set -x HYGEN_TMPLS '/Users/matt.williams/.config/_templates'
+# set -x AWS_REGION 'us-west-1'
+# contains $HOME/.fig/bin $fish_user_paths; or set -Ua fish_user_paths $HOME/.fig/bin
+# set -x corpsite_api_key {{ (onepasswordItemFields "datadogapikeys").corpsite_api_key.v }}
+# alias lg lazygit
+# set -x SSH_AUTH_SOCK /Users/matt.williams/Library/Containers/org.hejki.osx.sshce.agent/Data/socket.ssh
+
+
+# set -x TRAININGTOOLSGITHUBTOKEN {{ (onepasswordItemFields "githubtokens").trainingtools.v }}
+# # The next line updates PATH for the Google Cloud SDK.
+# if [ -f '/Users/matt.williams/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/matt.williams/Downloads/google-cloud-sdk/path.fish.inc'; end
+
+# function fish_hybrid_key_bindings --description \
+# "Vi-style bindings that inherit emacs-style bindings in all modes"
+#     for mode in default insert visual
+#         fish_default_key_bindings -M $mode
+#     end
+#     fish_vi_key_bindings --no-erase
+# end
+# set -g fish_key_bindings fish_hybrid_key_bindings
+alias i instruqt
+alias it "instruqt track"
+alias itp "instruqt track push"
+alias ito "instruqt track open"
+alias itl "instruqt track logs"
+alias itd "instruqt track deploy"
+alias itt "instruqt track test"
+alias itu "instruqt track upgrade"
+alias itv "instruqt track validate"
+alias c cat
+alias cma "chezmoi add"
+alias cm chezmoi
+set -x DOCKER_HOST ssh://docker@docker
+
+set -gx PATH $PATH $DENO_INSTALL/bin $HOME/.krew/bin $HOME/bin /usr/local/opt/qt/bin $HOME/.emacs.d/bin $HOME/.cargo/bin $HOME/.composer/vendor/bin $HOME/go/bin
