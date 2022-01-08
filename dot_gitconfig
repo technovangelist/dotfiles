@@ -1,0 +1,27 @@
+[user]
+	name = Matt Williams
+	email = m@technovangelist.com
+[core]
+	editor = /Applications/Komet.app/Contents/MacOS/Komet
+    	pager = delta
+	hooksPath = /usr/local/dd/global_hooks
+
+[delta]
+    plus-color = "#012800"
+    minus-color = "#340001"
+    syntax-theme = Monokai Extended
+    features = side-by-side line-numbers
+    line-numbers = true
+[interactive]
+    diffFilter = delta --color-only
+[alias]
+  wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+[pull]
+	rebase = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
