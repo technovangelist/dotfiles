@@ -85,5 +85,24 @@ set -x AWS_ASSUME_ROLE_TTL 1h
 set -x ddlearning_api_key {{ (onepasswordItemFields "ddlearningdatadogkeys").apikey.v }}
 set -x ddlearning_app_key {{ (onepasswordItemFields "ddlearningdatadogkeys").appkey.v }}
 set -x corpsite_api_key {{ (onepasswordItemFields "datadogapikeys").corpsite_api_key.v }}
-
+set -x NNN_PLUG "j:autojump"
 set -gx PATH $PATH $DENO_INSTALL/bin $HOME/.krew/bin $HOME/bin /usr/local/opt/qt/bin $HOME/.emacs.d/bin $HOME/.cargo/bin $HOME/.composer/vendor/bin $HOME/go/bin
+
+
+function __jump_add --on-variable PWD
+  status --is-command-substitution; and return
+  jump chdir
+end
+
+function __jump_hint
+  set -l term (string replace -r '^j ' '' -- (commandline -cp))
+  jump hint "$term"
+end
+
+function j
+  set -l dir (jump cd "$argv")
+  test -d "$dir"; and cd "$dir"
+end
+
+complete --command j --exclusive --arguments '(__jump_hint)'
+mcfly init fish | source
