@@ -2,9 +2,11 @@
 	name = Matt Williams
 	email = m@technovangelist.com
 [core]
+{{ if eq .chezmoi.os "darwin" }}
 	editor = /Applications/Komet.app/Contents/MacOS/Komet
-    	pager = delta
-	hooksPath = /usr/local/dd/global_hooks
+{{ end }}
+  pager = delta
+
 
 [delta]
     plus-color = "#012800"
