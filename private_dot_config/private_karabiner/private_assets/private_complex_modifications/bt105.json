@@ -1,0 +1,34 @@
+{
+  "title": "matts update",
+  "rules": [
+    {
+      "description": "map bt105 pedals to ctrl 1 and ctrl 2",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "page_down"
+          },
+          "to": [
+            {
+              "key_code": "1",
+              "modifiers": ["control"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "page_up"
+          },
+          "to": [
+            {
+              "key_code": "2",
+              "modifiers": ["control"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
