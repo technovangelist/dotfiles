@@ -1,5 +1,5 @@
 [secret]
-    command = "~/bin/dopplerget" 
+    command = "dopplerget" 
 
 [edit]
     command = "code"
