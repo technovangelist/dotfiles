@@ -1,3 +1,4 @@
+set -gx PATH $PATH /opt/homebrew/bin
 starship init fish | source
 [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
 
@@ -86,7 +87,7 @@ set -x ddlearning_api_key {{ secret "datadog-keys" "prd" "LTIAPIKEY" }}
 set -x ddlearning_app_key {{ secret "datadog-keys" "prd" "LTIAPPKEY" }}
 set -x corpsite_api_key {{ secret "datadog-keys" "prd" "CORPSITEAPIKEY" }}
 set -x NNN_PLUG "j:autojump"
-set -gx PATH $PATH $DENO_INSTALL/bin $HOME/.krew/bin $HOME/bin /usr/local/opt/qt/bin $HOME/.emacs.d/bin $HOME/.cargo/bin $HOME/.composer/vendor/bin $HOME/go/bin /opt/homebrew/bin
+set -gx PATH $PATH $DENO_INSTALL/bin $HOME/.krew/bin $HOME/bin /usr/local/opt/qt/bin $HOME/.emacs.d/bin $HOME/.cargo/bin $HOME/.composer/vendor/bin $HOME/go/bin 
 
 
 function __jump_add --on-variable PWD
