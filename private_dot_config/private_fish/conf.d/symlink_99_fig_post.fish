@@ -1,1 +1,1 @@
-/Users/matt.williams/.fig/shell/post.fish
+~/.fig/shell/post.fish

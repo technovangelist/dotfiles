@@ -1,1 +1,1 @@
-/Users/matt.williams/.fig/shell/pre.fish
+~/.fig/shell/pre.fish
