@@ -1,0 +1,1 @@
+~/.fig/shell/post.fish

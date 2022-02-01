@@ -1,0 +1,17 @@
+[
+  {
+    "type": "basic",
+    "from": {
+      "key_code": "semicolon",
+      "modifiers": {
+        "optional": ["caps_lock"]
+      }
+    },
+    "to": [
+      {
+        "key_code": "semicolon",
+        "modifiers": ["left_shift"]
+      }
+    ]
+  }
+]
