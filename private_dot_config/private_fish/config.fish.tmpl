@@ -88,7 +88,7 @@ set -x corpsite_api_key {{ secret "datadog-keys" "prd" "CORPSITEAPIKEY" }}
 set -x NNN_PLUG "j:autojump"
 set -gx N_PREFIX $HOME/.n
 set -gx PATH $PATH $DENO_INSTALL/bin $HOME/.krew/bin $HOME/bin /usr/local/opt/qt/bin $HOME/.emacs.d/bin $HOME/.cargo/bin $HOME/.composer/vendor/bin $HOME/go/bin 
-
+set -x SSH_AUTH_SOCK /Users/matt/Library/Containers/org.hejki.osx.sshce.agent/Data/socket.ssh
 
 function __jump_add --on-variable PWD
   status --is-command-substitution; and return
